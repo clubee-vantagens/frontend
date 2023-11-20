@@ -1,14 +1,13 @@
-import { useState } from 'react'
 import { Email, Password, Submit } from './styleForm'
+import useForm from '../../hooks/useForm'
 
 function Form() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const { form, onChange } = useForm({email: "", password: ""})
 
   return (
     <form action="" method="post">
-      <Email type="email" name="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} /> <br />
-      <Password type="password" name="pasword" placeholder='Senha' value={password} onChange={(e) => setPassword(e.target.value)} /> <br />
+      <Email type="email" name="email" placeholder='Email' value={form.email} onChange={onChange} /> <br />
+      <Password type="password" name="password" placeholder='Senha' value={form.password} onChange={onChange} /> <br />
       <Submit type="submit" value="Login" onClick={() => { }} />
     </form>
   )
