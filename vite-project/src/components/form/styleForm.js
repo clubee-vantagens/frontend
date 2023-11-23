@@ -32,4 +32,15 @@ const Label = styled.label`
   font-size: 20px;
 `
 
-export { Email, Password, Submit, FormContainer, Label }
+const PasswordContainer = styled.div`
+  position: relative;
+  .show-hide-icon {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+`
+
+export { Email, Password, Submit, FormContainer, Label, PasswordContainer }
