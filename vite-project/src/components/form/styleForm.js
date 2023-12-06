@@ -2,18 +2,22 @@ import { styled } from 'styled-components'
 
 const Email = styled.input`
   border: none;
-  border-bottom: 1px solid black;
+  border-radius: 15px;
   margin-bottom: 5px;
   padding: 5px;
-  width: 100%
+  width: 80%;
+  height: 45px;
+  text-align: center;
 `
 
 const Password = styled.input`
   border: none;
-  border-bottom: 1px solid black;
+  border-radius: 15px;
   margin-bottom: 10px;
   padding: 5px;
-  width: 100%
+  width: 100%;
+  height: 45px;
+  text-align: center;
 `
 
 const Submit = styled.input`
@@ -25,15 +29,13 @@ const Submit = styled.input`
 const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  width: 90%;
-`
-const Label = styled.label`
-  font-weight: 600;
-  font-size: 20px;
+  align-items: center;
+  width: 100%;
 `
 
 const PasswordContainer = styled.div`
   position: relative;
+  width: 80%;
   .show-hide-icon {
     position: absolute;
     right: 10px;
@@ -42,5 +44,8 @@ const PasswordContainer = styled.div`
     cursor: pointer;
   }
 `
+const LogoImage = styled.img`
 
-export { Email, Password, Submit, FormContainer, Label, PasswordContainer }
+`
+
+export { Email, Password, Submit, FormContainer, PasswordContainer, LogoImage }
