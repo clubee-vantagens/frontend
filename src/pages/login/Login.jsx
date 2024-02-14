@@ -1,17 +1,14 @@
-import Footer from "../../components/footer/Footer"
-import Form from "../../components/form/Form"
-import { TagMain, Div } from './styleLogin'
-
+import Footer from "../../components/footer/Footer";
+import Form from "../../components/form/Form";
 
 function Login() {
-
   return (
-    <TagMain>
-      <Div id="login"></Div>
+    <main className="flex flex-col justify-between items-center w-screen h-screen bg-yellow-400">
+      <div className="text-xl font-bold mt-2.5" id="login"></div>
       <Form id="login-form" />
       <Footer />
-    </TagMain>
-  )
+    </main>
+  );
 }
 
-export default Login
+export default Login;

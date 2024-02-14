@@ -1,9 +1,10 @@
-import { TagFooter, TagA } from './styleFooter'
-
 function Footer() {
   return (
-    <TagFooter>Não tem conta? Se <TagA>cadastre agora</TagA>!</TagFooter>
-  )
+    <footer className="mb-[10px] font-semibold">
+      Não tem conta? Se{" "}
+      <a className="font-bold text-black decoration-inherit">cadastre agora</a>!
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
