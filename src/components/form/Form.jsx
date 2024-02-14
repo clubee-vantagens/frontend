@@ -44,10 +44,13 @@ function Form() {
           />
         )}
       </div>
+      <div className="w-4/5 flex justify-end mb-10">
+        <a href="#" className="text-gray-500">recuperar a senha?</a>
+      </div>
       <input
-        className="p-1 w-1/3 items-center"
+        className="p-1 items-center w-[215px] h-[50px] rounded-2xl bg-white"
         type="submit"
-        value="Login"
+        value="Entrar"
         onClick={() => {}}
       />
     </form>
