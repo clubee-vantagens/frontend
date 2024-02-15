@@ -20,11 +20,7 @@ function Form() {
         placeholder="Informe seu email"
         value={form.email}
         onChange={onChange}
-<<<<<<< HEAD
         className="border-none outline-none rounded-2xl mb-3 p-4 w-4/5 h-11"
-=======
-        className="border-none rounded-2xl mb-3 p-1.5 w-4/5 h-11 text-center"
->>>>>>> d8ad8b425666e3377eb7825b2699f8e3a14fadca
       />{" "}
       <div className="relative w-4/5">
         <input
@@ -33,11 +29,7 @@ function Form() {
           placeholder="Senha"
           value={form.password}
           onChange={onChange}
-<<<<<<< HEAD
           className="border-none outline-none rounded-2xl mb-1.5 p-4 w-full h-11"
-=======
-          className="border-none rounded-2xl mb-1.5 p-1.5 w-full h-11 text-center"
->>>>>>> d8ad8b425666e3377eb7825b2699f8e3a14fadca
         />{" "}
         <br />
         {isHidden ? (
@@ -53,13 +45,9 @@ function Form() {
         )}
       </div>
       <div className="w-4/5 flex justify-end mb-10">
-<<<<<<< HEAD
         <a href="#" className="text-gray-500">
           recuperar a senha?
         </a>
-=======
-        <a href="#" className="text-gray-500">recuperar a senha?</a>
->>>>>>> d8ad8b425666e3377eb7825b2699f8e3a14fadca
       </div>
       <input
         className="p-1 items-center w-[215px] h-[50px] rounded-2xl bg-white"
