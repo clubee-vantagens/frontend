@@ -3,7 +3,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import clubeeLogo from "../../assets/svgs/Clubee_logo1.svg";
 
-function Form() {
+function FormLogin() {
   const { form, onChange } = useForm({ email: "", password: "" });
   const [isHidden, setIsHidden] = useState(true);
 
@@ -59,4 +59,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default FormLogin;
