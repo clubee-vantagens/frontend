@@ -3,7 +3,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import clubeeLogo from "../../assets/svgs/Clubee_logo1.svg";
 
-function Form() {
+function FormLogin() {
   const { form, onChange } = useForm({ email: "", password: "" });
   const [isHidden, setIsHidden] = useState(true);
 
@@ -20,7 +20,7 @@ function Form() {
         placeholder="Informe seu email"
         value={form.email}
         onChange={onChange}
-        className="border-none rounded-2xl mb-3 p-1.5 w-4/5 h-11 text-center"
+        className="border-none outline-none rounded-2xl mb-3 p-4 w-4/5 h-11"
       />{" "}
       <div className="relative w-4/5">
         <input
@@ -29,7 +29,7 @@ function Form() {
           placeholder="Senha"
           value={form.password}
           onChange={onChange}
-          className="border-none rounded-2xl mb-1.5 p-1.5 w-full h-11 text-center"
+          className="border-none outline-none rounded-2xl mb-1.5 p-4 w-full h-11"
         />{" "}
         <br />
         {isHidden ? (
@@ -45,7 +45,9 @@ function Form() {
         )}
       </div>
       <div className="w-4/5 flex justify-end mb-10">
-        <a href="#" className="text-gray-500">recuperar a senha?</a>
+        <a href="#" className="text-gray-500">
+          recuperar a senha?
+        </a>
       </div>
       <input
         className="p-1 items-center w-[215px] h-[50px] rounded-2xl bg-white"
@@ -57,4 +59,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default FormLogin;
