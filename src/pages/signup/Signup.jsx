@@ -1,55 +1,59 @@
+import { useState } from "react";
 import clubeeLogo from "../../assets/svgs/clubee-logo-2.svg";
 import { LuChevronRight } from "react-icons/lu";
 
 export default function Signup() {
+  const [activeForm, setActiveForm] = useState('estabelecimento')
+  
   return (
     <div className="bg-yellow-400 h-screen">
       <header className="flex flex-col items-center p-8">
         <img src={clubeeLogo} className="size-[150px]" />
         <h1 className="font-bold text-3xl">Cadastro</h1>
       </header>
-      <main className="bg-white rounded-t-xl ml-1 mr-1 h-[80%]">
+      <main className="bg-[#FEFAEA] rounded-t-xl ml-1 mr-1 h-[73%]">
         <nav>
-          <ul className="flex gap-8 text-xl justify-evenly text-gray-300 font-semibold">
-            <li>Estabelecimento</li>
-            <li className="bg-gray-500">Cliente</li>
+          <ul className="flex text-xl text-gray-400 font-semibold h-14 items-center">
+            <li onClick={() => {setActiveForm('estabelecimento')}} className={`flex items-center justify-center w-1/2 h-full rounded-br-xl rounded-tl-xl ${activeForm === 'estabelecimento' ? `bg-gray-200 w-1/2 h-full` : null}`}>Estabelecimento</li>
+            <li onClick={() => {setActiveForm('cliente')}} className={`flex items-center justify-center  w-1/2 h-full rounded-bl-xl rounded-tr-xl ${activeForm === 'cliente' ? `bg-gray-200` : null}`}>Cliente</li>
           </ul>
         </nav>
-        <form>
+        {activeForm === 'estabelecimento' && (<form>
           <fieldset className="flex flex-col items-center gap-5 py-10">
             <input
-              className="border border-gray-400 rounded-full py-1 w-4/5 "
+              className="border border-gray-400 rounded-full py-1 w-4/5 pl-2 bg-[#FEFAEA]"
               required
               type="text"
               placeholder="Nome Fantasia"
             />
             <input
-              className="border border-gray-400 rounded-full py-1 w-4/5 "
+              className="border border-gray-400 rounded-full py-1 w-4/5 pl-2 bg-[#FEFAEA]"
               required
               type="email"
               placeholder="Email"
             />
             <input
-              className="border border-gray-400 rounded-full py-1 w-4/5 "
+              className="border border-gray-400 rounded-full py-1 w-4/5 pl-2 bg-[#FEFAEA]"
               required
               type="password"
               placeholder="Senha"
             />
             <input
-              className="border border-gray-400 rounded-full py-1 w-4/5 "
+              className="border border-gray-400 rounded-full py-1 w-4/5 pl-2 bg-[#FEFAEA]"
               type="password"
               placeholder="Confirmar Senha"
             />
             <input
-              className="border border-gray-400 rounded-full py-1 w-4/5 "
+              className="border border-gray-400 rounded-full py-1 w-4/5 pl-2 bg-[#FEFAEA]"
               type="text"
               placeholder="CNPJ"
             />
             <select
-              className="border border-gray-400 rounded-full py-1 w-4/5 "
+              className="border border-gray-400 rounded-full py-1 w-4/5 bg-[#FEFAEA]"
               type="text"
-              placeholder="Segmento"
+              defaultValue='segmento'
             >
+              <option disabled value="segmento">Segmento</option>
               <option value="restaurante">Restaurante</option>
               <option value="cafeteria">Cafeteria</option>
               <option value="padaria">Padaria</option>
@@ -69,7 +73,37 @@ export default function Signup() {
               <LuChevronRight className="size-20 text-gray-400" />
             </button>
           </fieldset>
-        </form>
+        </form>)}
+        {activeForm === 'cliente' && (<form>
+          <fieldset className="flex flex-col items-center gap-5 py-10">
+            <input
+              className="border border-gray-400 rounded-full py-1 w-4/5 pl-2 bg-[#FEFAEA]"
+              required
+              type="text"
+              placeholder="Nome"
+            />
+            <input
+              className="border border-gray-400 rounded-full py-1 w-4/5 pl-2 bg-[#FEFAEA]"
+              required
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              className="border border-gray-400 rounded-full py-1 w-4/5 pl-2 bg-[#FEFAEA]"
+              required
+              type="password"
+              placeholder="Senha"
+            />
+            <input
+              className="border border-gray-400 rounded-full py-1 w-4/5 pl-2 bg-[#FEFAEA]"
+              type="password"
+              placeholder="Confirmar Senha"
+            />
+            <button className="self-end mt-20" type="submit">
+              <LuChevronRight className="size-20 text-gray-400" />
+            </button>
+          </fieldset>
+        </form>)}
       </main>
     </div>
   );
