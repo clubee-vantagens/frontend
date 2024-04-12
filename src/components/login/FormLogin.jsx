@@ -1,7 +1,7 @@
 import useForm from "../../hooks/useForm";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-import clubeeLogo from "../../assets/svgs/Clubee_logo1.svg";
+import clubeeLogo from "../../assets/icons/clubee-logo.png";
 
 function FormLogin() {
   const { form, onChange } = useForm({ email: "", password: "" });
