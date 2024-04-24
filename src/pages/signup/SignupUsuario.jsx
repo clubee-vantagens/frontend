@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useForm from "../../hooks/useForm";
 import { IoCloseOutline } from "react-icons/io5";
 import clubeeLogo from '../../assets/icons/clubee-logo.png'
+import {useNavigate} from 'react-router-dom'
 
 export default function SignupUsuario() {
   const { form, onChange } = useForm({
@@ -14,12 +15,13 @@ export default function SignupUsuario() {
     termos: false,
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate()
   return (
     <div className="bg-[#FFFAEB] h-screen">
       <header className="grid grid-cols-3 h-40">
         <LuChevronLeft
           className="size-10 text-gray-400"
-          onClick={() => console.log("pressed")}
+          onClick={() => navigate('/login')}
         />
 
         <h1 className="font-bold text-3xl self-center col-start-2 col-end-4">
@@ -94,7 +96,7 @@ export default function SignupUsuario() {
         </form>
         {isModalOpen && (
           <div className="bg-[#FFFAEB] w-4/5 h-1/2 absolute rounded-3xl top-[25%] left-[10%] flex flex-col justify-between items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
-            <IoCloseOutline className="self-end size-10" />
+            <IoCloseOutline onClick={() => setIsModalOpen(false)} className="self-end size-10" />
             <img src={clubeeLogo}/>
             <p>Cadastro realizado com sucesso!</p>
             <button className='bg-[#6ff79a] w-48 h-12 rounded-md drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] mb-3 font-bold' onClick={() => setIsModalOpen(false)}>Continuar</button>
