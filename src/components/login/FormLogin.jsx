@@ -5,14 +5,18 @@ import clubeeLogo from "../../assets/icons/clubee-logo.png";
 
 function FormLogin() {
   const { form, onChange } = useForm({ email: "", password: "" });
-  const [isHidden, setIsHidden] = useState(true);
+  const [isEyesHidden, setIsEyesHidden] = useState(true);
 
   const handleShowPassword = () => {
-    setIsHidden((prevState) => !prevState);
+    setIsEyesHidden((prevState) => !prevState);
   };
 
   return (
-    <form className="flex flex-col items-center w-full" action="" method="post">
+    <form
+      className="flex flex-col items-center w-full gap-5"
+      action=""
+      method="post"
+    >
       <img className="w-72 h-56 " src={clubeeLogo} />
       <input
         type="email"
@@ -24,7 +28,7 @@ function FormLogin() {
       />{" "}
       <div className="relative w-4/5">
         <input
-          type={isHidden ? "password" : "text"}
+          type={isEyesHidden ? "password" : "text"}
           name="password"
           placeholder="Senha"
           value={form.password}
@@ -32,7 +36,7 @@ function FormLogin() {
           className="border-none outline-none rounded-2xl mb-1.5 p-4 w-full h-11"
         />{" "}
         <br />
-        {isHidden ? (
+        {isEyesHidden ? (
           <FaRegEye
             className="absolute right-2.5 top-[45%] -translate-y-1/2 cursor-pointer"
             onClick={handleShowPassword}
@@ -50,7 +54,7 @@ function FormLogin() {
         </a>
       </div>
       <input
-        className="p-1 items-center w-[215px] h-[50px] rounded-2xl bg-white"
+        className="p-1 items-center w-[215px] h-[50px] rounded-3xl bg-white hover:bg-green-600 hover:text-white"
         type="submit"
         value="Entrar"
         onClick={() => {}}
