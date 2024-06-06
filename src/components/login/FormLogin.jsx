@@ -1,7 +1,7 @@
 import useForm from "../../hooks/useForm";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-import clubeeLogo from "../../assets/icons/clubee-logo.png";
+import clubeeLogo from "../../assets/icons/clubee-logo-subtitulado.png";
 
 function FormLogin() {
   const { form, onChange } = useForm({ email: "", password: "" });
@@ -24,7 +24,7 @@ function FormLogin() {
         placeholder="Informe seu email"
         value={form.email}
         onChange={onChange}
-        className="border-none outline-none rounded-2xl mb-3 p-4 w-4/5 h-11"
+        className="border-none outline-none rounded-2xl mb-3 p-4 w-4/5 h-11 shadow-md"
       />{" "}
       <div className="relative w-4/5">
         <input
@@ -33,7 +33,7 @@ function FormLogin() {
           placeholder="Senha"
           value={form.password}
           onChange={onChange}
-          className="border-none outline-none rounded-2xl mb-1.5 p-4 w-full h-11"
+          className="border-none outline-none rounded-2xl mb-1.5 p-4 w-full h-11 shadow-md"
         />{" "}
         <br />
         {isEyesHidden ? (
@@ -54,7 +54,7 @@ function FormLogin() {
         </a>
       </div>
       <input
-        className="p-1 items-center w-[215px] h-[50px] rounded-3xl bg-white hover:bg-green-600 hover:text-white"
+        className="p-1 items-center w-[215px] h-[50px] rounded-3xl bg-background__button"
         type="submit"
         value="Entrar"
         onClick={() => {}}
