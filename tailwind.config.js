@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        background__primary: "#facc15",
+        background__primary: "#F4EAA6",
+        background__secondary: "#FFFAEB",
+        background__button: "#6FF79A"
       },
     },
   },
